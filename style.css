@@ -1,0 +1,61 @@
+:root {
+  --bg: #0b1124;
+  --bg-top: #141d3a;
+  --card: #19223f;
+  --border: rgba(255, 255, 255, 0.08);
+  --ink: #e2e8f0;
+  --muted: #a3b1c6;
+  --accent: #5eead4;
+  --accent-ink: #04201b;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f7fb;
+    --bg-top: #ffffff;
+    --card: #ffffff;
+    --border: rgba(15, 23, 42, 0.1);
+    --ink: #0f172a;
+    --muted: #475569;
+    --accent: #0f766e;
+    --accent-ink: #ffffff;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: linear-gradient(var(--bg-top), var(--bg) 420px) var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+header.brand { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+header.brand a { color: var(--ink); text-decoration: none; font-weight: 700; letter-spacing: 0.02em; }
+header.brand .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.15; margin: 0 0 12px; }
+h2 { font-size: 22px; margin: 40px 0 12px; }
+h3 { font-size: 17px; margin: 24px 0 4px; }
+p, li { color: var(--muted); }
+strong { color: var(--ink); }
+a { color: var(--accent); }
+.lead { font-size: 19px; }
+.app {
+  display: flex; gap: 16px; align-items: center;
+  background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+  padding: 16px; margin: 16px 0;
+}
+.app img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+.app h3 { margin: 0; }
+.app p { margin: 2px 0 8px; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
+.button {
+  display: inline-block; padding: 8px 14px; border-radius: 999px;
+  background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; font-size: 15px;
+}
+.button.quiet { background: transparent; color: var(--accent); border: 1px solid var(--border); }
+.hero { display: flex; gap: 16px; align-items: center; margin-bottom: 8px; }
+.hero img { width: 84px; height: 84px; border-radius: 19px; flex: none; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 4px 20px 16px; margin: 16px 0; }
+ul { padding-left: 20px; }
+footer { margin-top: 48px; font-size: 14px; color: var(--muted); }
+footer a { color: var(--muted); }
